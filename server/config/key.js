@@ -1,4 +1,4 @@
 require("dotenv").config();
 module.exports = {
-  mongodbURL: process.env.DB_HOST,
+  mongodbURL: process.env.YOUR_DB_KEY,
 };
