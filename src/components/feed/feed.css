@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&family=Roboto:ital,wght@0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap");
+.image-fluid {
+  width: 100%;
+}
+.banner_area {
+  align-items: center;
+}
+
+.left_wrapper > h2 {
+  font-family: "Girassol", cursive;
+  color: rgb(42, 81, 255);
+}
+.left_wrapper > h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+.left_wrapper {
+  position: relative;
+}
+.left_wrapper > small {
+  font-family: "Girassol", cursive;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}
+.top_bottom {
+  animation: top_bottom 4s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes top_bottom {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn-info {
+  border-radius: 10px;
+}
+.main-heading {
+  color: #5d4037;
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 20px;
+}
+.image_hover {
+  border-radius: 20px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.image_hover:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.item1 {
+  margin: 10px;
+}
+
+.card {
+  height: auto;
+  border-radius: 12px;
+}
+
+.loader_parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+.loader {
+  width: 5em;
+  height: 5em;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-top: 0.2em solid hotpink;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  animation: rotating 2s ease-in-out infinite;
+  --direction: 1;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: 5px;
+}
+
+.loader::before {
+  border-top: 0.2em solid dodgerblue;
+  transform: rotate(120deg);
+}
+
+.loader::after {
+  border-top: 0.2em solid gold;
+  transform: rotate(240deg);
+}
+
+.loader span {
+  position: absolute;
+  color: white;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 3em;
+  font-family: sans-serif;
+  animation: rotating 2s linear infinite;
+  --direction: -1;
+}
+
+@keyframes rotating {
+  50% {
+    transform: rotate(calc(180deg * var(--direction)));
+  }
+
+  100% {
+    transform: rotate(calc(360deg * var(--direction)));
+  }
+}

@@ -1,0 +1,35 @@
+.container-fluid {
+  max-width: 1400px;
+  margin: auto;
+  padding: 5px 20px;
+}
+.menu_items {
+  display: flex;
+
+  justify-content: center;
+}
+.search_input {
+  display: inline-block;
+
+  width: 100%;
+  text-align: center;
+}
+.input_controls {
+  border: 1px solid black;
+  outline: none;
+
+  padding: 5px 5px;
+}
+.input_controls:focus {
+  outline: 2px solid rgba(7, 222, 250, 0.959);
+  outline-offset: unset;
+}
+.card-img-top {
+  width: 100%;
+}
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  border-radius: 50%;
+  cursor: pointer;
+}
